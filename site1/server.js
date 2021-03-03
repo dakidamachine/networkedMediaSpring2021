@@ -4,7 +4,7 @@ var path = require('path');
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/Doraemon.html'));
+  res.sendFile(path.join(__dirname + '/public/Doraemon.html'));
 });
 
 app.listen(80, function () {
