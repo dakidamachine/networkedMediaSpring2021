@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var path = require('path');
 
 var urlencodedBodyParser = bodyParser.urlencoded({extended:true});
 
@@ -9,9 +10,8 @@ app.set('view engine', 'ejs');
 
 var submittedData = [];
 
-//How to set this to a specific HTML page?
 app.get('/', function(req,res){
-    res.send('Hello World');
+    res.sendFile(path.join(__dirname + '/public/index.html'))
 });
 
 app.post('/formdata', function(req,res){
