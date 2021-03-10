@@ -36,6 +36,12 @@ display: block;
 color: #9fd43e;
 }
 
+.h1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+
 .main {
     width: 50%;
     margin-top: 20px;
