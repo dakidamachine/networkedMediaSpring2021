@@ -1,4 +1,7 @@
 
+.body{
+    background-image: url('pink_BG.jpg');
+}
 .homeButton {
     width: 200px;
     position: fixed;
