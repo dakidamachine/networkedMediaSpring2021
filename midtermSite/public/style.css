@@ -36,10 +36,11 @@ display: block;
 color: #9fd43e;
 }
 
-.h1 {
+.general h1 {
     font-family: 'Oswald', sans-serif;
     text-align: center;
     font-size: 35px;
+    color: #9fd43e;
 }
 
 .main {
