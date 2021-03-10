@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<style>
+
+	.homeButton {
+		width: 200px;
+		position: fixed;
+		z-index: 1;
+		top: 3%;
+		left: 23px;
+	}
+
+	.homeButton img{
+		width: 90%;
+	}
+	.sidenav {
+	  width: 200px;
+	  position: fixed;
+	  z-index: 1;
+	  top: 25%;
+	  left: 10px;
+	  background: #5f5647;
+	  overflow-x: hidden;
+	  padding: 8px 0;
+	  border-radius: 6px;
+	  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	.sidenav a {
+	  padding: 6px 8px 6px 15px;
+	  text-decoration: none;
+	  font-size: 20px;
+	  font-family: 'Montserrat', sans-serif;
+	  color: #DDDDDD;
+	  display: block;
+	}
+
+	.sidenav a:hover {
+	  color: #9fd43e;
+	}
+
+	.main {
+		width: 50%;
+		margin-top: 20px;
+		margin-left: 19%;
+		padding: 10px 30px 30px 30px;
+		background-color: #5f5647;
+		border-radius: 6px;
+	  	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  	font-size: 20px;
+	  	font-family: 'Kanit', sans-serif;
+	  	color: #DDDDDD;
+	}
+
+	.main img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+	}
+
+	.main h1{
+    	font-family: 'Oswald', sans-serif;
+      	text-align: center;
+		font-size: 35px;
+
+	}
+
+		 /* Popup container */
+	.popup {
+	  position: fixed;
+	  right: 25%;
+	  top: 25%;
+	  display: inline-block;
+	  cursor: pointer;
+	}
+
+	/* The actual popup (appears on top) */
+	.popup .popuptext {
+	  visibility: hidden;
+	  width: 300px;
+	  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  background-color: #999999;
+	  color: #EEEEEE;
+	  font-family: 'Kanit', sans-serif;
+	  text-align: center;
+	  border-radius: 50px;
+	  padding: 8px 30px;
+	  position: absolute;
+	  z-index: 1;
+	  bottom: 125%;
+	  left: 50%;
+	  margin-left: -80px;
+	}
+
+	/* Popup arrow */
+	.popup .popuptext::after {
+	  content: "";
+	  position: absolute;
+	  top: 100%;
+	  left: 50%;
+	  margin-left: -5px;
+	  border-width: 8px;
+	  border-style: solid;
+	  border-color: #df93b3 transparent transparent transparent;
+	}
+
+	/* Toggle this class when clicking on the popup container (hide and show the popup) */
+	.popup .show {
+	  visibility: visible;
+	  -webkit-animation: fadeIn .25s;
+	  animation: fadeIn .25s
+	}
+
+	/* Add animation (fade in the popup) */
+	@-webkit-keyframes fadeIn {
+	  from {opacity: 0;}
+	  to {opacity: 1;}
+	}
+
+	@keyframes fadeIn {
+	  from {opacity: 0;}
+	  to {opacity:1 ;}
+	} 
+
+	.general {
+	  margin-left: 210px; /* Same width as the sidebar + left position in px */
+	  font-size: 28px; /* Increased text to enable scrolling */
+	  padding: 0px 10px;
+	}
+
+</style>
+
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet"> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<script src="imageMapResizer.min.js"></script>
+	<script>
+	     $(document).ready(function() {
+	         $('map').imageMapResize();
+	     });
+	</script>
+
+	<script>
+	// When the user clicks on div, open the popup
+	function headFunction() {
+	  var popup = document.getElementById("headPopUp");
+	  popup.classList.toggle("show");
+	}
+
+	function leftArmFunction(){
+		var popup = document.getElementById("leftArmPopUp")
+		popup.classList.toggle("show");
+	}
+	function rightArmFunction(){
+		var popup = document.getElementById("rightArmPopUp")
+		popup.classList.toggle("show");
+	}
+	function leftLegFunction(){
+		var popup = document.getElementById("leftLegPopUp")
+		popup.classList.toggle("show");
+	}
+	function rightLegFunction(){
+		var popup = document.getElementById("rightLegPopUp")
+		popup.classList.toggle("show");
+	}
+	</script>
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tales From The Plushies</title>
+</head>
+
+<body style="background-image: url('rust.jpg');">
+	<div class="homeButton">
+		<a href="google.com">
+			<img src="Home2.png" alt="HOME">
+		</a>
+	</div>
+
+	 <!-- Side navigation -->
+	<div class="sidenav">
+		<a href="SonicNurse.html">Sonic Nurse</a>
+	  	<a href="Doraemon.html">Doraemon</a>
+	  	<a href="Froggie.html">Froggie</a>
+	  	<a href="Sakamoto.html">Sakamoto</a>
+	</div>
+
+	<!-- Page content -->
+	<div class="general">
+
+		<section class="main">
+			<h1>Click On My Appendages!</h1>
+			<img src="froggie.png" alt="Froggie" usemap="#Froggie">
+			BEHOLD. A frog appears while you are walking in the tall grass, he reaches into his coat and pulls out his wares. It seems that he is a travelling merchant.
+			<map name="Froggie">
+				<!-- left arm -->
+				<area shape="rect" coords="0,175,150,250" onclick="leftArmFunction()">
+				<!-- right arm -->
+				<area shape="rect" coords="300,175,450,250" onclick="rightArmFunction()">
+				<!-- Head -->
+				<area shape="circle" coords="230,140,75" onclick="headFunction()">
+				<!-- left leg -->
+				<area shape="rect" coords="150,300,220,600" onclick="leftLegFunction()">
+				<!-- right leg -->
+				<area shape="rect" coords="240,300,350,600" onclick="rightLegFunction()">
+			</map>
+
+		</section>
+
+		<div class="popup" onclick="headFunction()">  
+  			<span class="popuptext" id="headPopUp">Greetings traveller. Can I interest you in any fine goods?</span>
+		</div>
+
+		<div class="popup" onclick="leftArmFunction()">  
+  			<span class="popuptext" id="leftArmPopUp">If you've got the gold. I've got what ya need.</span>
+		</div>
+
+		<div class="popup" onclick="rightArmFunction()"> 
+  			<span class="popuptext" id="rightArmPopUp">Just got that new battleaxe 360 in stock. </span>
+		</div>
+		<div class="popup" onclick="leftLegFunction()"> 
+  			<span class="popuptext" id="leftLegPopUp">I DONT ACCEPT CARD.</span>
+		</div>
+		<div class="popup" onclick="rightLegFunction()"> 
+  			<span class="popuptext" id="rightLegPopUp">Alright Alright I will take crypto doe.</span>
+		</div>
+
+	</div> 
+
+</body>
+
+</html>
